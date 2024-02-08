@@ -43,7 +43,7 @@ public class WebSecurityConfig {
                 .authenticated()).formLogin(form -> form.loginPage("/login")
                 .permitAll());
 
-        return null;
+        return http.build();
 
     }
 
