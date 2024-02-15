@@ -2,21 +2,13 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Log In</title>
 </head>
 <body>
-<form th:action="@{/login}" method="POST" th:object="${userName}">
-        <label>User Name</label>
-        <div><input type="email" placeholder="Enter Username" th:field="*{email}"></div>
-        <label>Password : </label>
-            <div><input type="password" placeholder="Enter Password" th:field="*{password}"></div>
-        <button type="submit">Login</button>
-        <input type="checkbox" checked="checked"> Remember me
-        <button type="button" class="cancelbtn"> Cancel</button>
-        Forgot <a href="#"> password? </a>
-    </div>
-</form>
-
-
+    <form th:action="@{/login}" method="POST">
+        <div><input type="text" name="username" placeholder="Email"></div>
+        <div><input type="password" name="password" placeholder="Password"></div>
+        <div><input type="submit" value="Log-in!"></div>
+    </form>
 </body>
 </html>

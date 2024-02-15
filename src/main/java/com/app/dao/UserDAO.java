@@ -27,7 +27,7 @@ public class UserDAO {
 
     public List<User> getUserByEmail(String email) {
         RowMapper<User> rowMapper = (rs, rowNumber) -> mapUser(rs);
-        return jdbcTemplate.query("SELECT * FROM users WERE email = ?", rowMapper, email);
+        return jdbcTemplate.query("SELECT * FROM users WHERE email = ?", rowMapper, email);
 
     }
 
