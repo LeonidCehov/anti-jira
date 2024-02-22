@@ -1,8 +1,14 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
  <head>
-    <title>Hello, World!</title>
+    <title>ANTI JIRA</title>
  </head>
 <body>
-   <div>Hello, World!</div>
+   <div th:each="project : ${project}">
+        <div th:text="${project.name}"></div>
+   </div>
+    <div><a href="/new-project">Create Project</a></div>
  </body>
 </html>
