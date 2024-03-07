@@ -16,7 +16,7 @@ public class ProjectDAO {
     private JdbcTemplate jdbcTemplate;
 
     public void storeNewProject(Project project){
-        jdbcTemplate.update("INSERT INTO projects (name, color)" + "VALUE (?,?)",
+        jdbcTemplate.update("INSERT INTO projects (name, color) VALUES (?,?)",
                 project.getName(),project.getColor());
     }
 
