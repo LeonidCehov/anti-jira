@@ -3,10 +3,11 @@ package com.app.model;
 public class Ticket {
     //-----ATTRIBUTES----
     private long id;
-    private String summery;
+    private String summary;
     private String description;
     private long statusId;
-    private long reporterId;
+ //   private long reporterId;
+    private User user;
     private long assignId;
     private long projectId;
     private String type;
@@ -21,12 +22,12 @@ public class Ticket {
         this.id = id;
     }
 
-    public String getSummery() {
-        return summery;
+    public String getSummary() {
+        return summary;
     }
 
-    public void setSummery(String summery) {
-        this.summery = summery;
+    public void setSummary(String summery) {
+        this.summary = summery;
     }
 
     public String getDescription() {
@@ -45,12 +46,12 @@ public class Ticket {
         this.statusId = statusId;
     }
 
-    public long getReporterId() {
-        return reporterId;
+    public User getUser() {
+        return user;
     }
 
-    public void setReporterId(long reporterId) {
-        this.reporterId = reporterId;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public long getAssignId() {
